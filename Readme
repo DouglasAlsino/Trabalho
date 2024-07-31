@@ -1,0 +1,32 @@
+# To Do List Application
+
+## Descrição
+
+Este é um aplicativo de lista de tarefas (To Do List) desenvolvido com Node.js e MySQL, que implementa um sistema Kanban com as listas 'Backlog', 'Fazer', 'Fazendo' e 'Feito'. Ele permite adicionar, atualizar, visualizar e deletar tarefas, além de mover as tarefas entre as listas.
+
+## Funcionalidades
+
+- **Inserir Tarefa:** Adicionar uma nova tarefa ao sistema.
+- **Atualizar Tarefa:** Editar os detalhes de uma tarefa existente.
+- **Deletar Tarefa:** Remover uma tarefa do sistema.
+- **Mover Tarefa:** Mover tarefas entre as listas 'Backlog', 'Fazer', 'Fazendo' e 'Feito'.
+
+## Tecnologias Utilizadas
+
+- **Node.js:** Plataforma de desenvolvimento.
+- **Express.js:** Framework para Node.js para gerenciar rotas e middleware.
+- **MySQL:** Sistema de Gerenciamento de Banco de Dados (SGBD) utilizado para persistência de dados.
+- **CSS:** Estilização das páginas.
+
+## Requisitos
+
+- **Node.js:** v14.17.0 ou superior
+- **MySQL:** v8.0 ou superior
+- **NPM:** v6.14.13 ou superior
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone 
+   cd to-do-list

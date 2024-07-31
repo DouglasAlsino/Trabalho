@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Kanban</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="kanban">
+    <% Object.keys(tasks).forEach(status => { %>
+      <div class="column">
+        <h2><%= status %></h2>
+        <form action="/add" method="post">
+          <input type="text" name="task" placeholder="New task" required>
+          <button type="submit">Add</button>
+        </form>
+        <ul>
+          <% tasks[status].forEach(task => { %>
+            <li>
+              <form action="/update-name" method="post" style="display:inline;">
+                <input type="text" name="name" value="<%= task.name %>">
+                <input type="hidden" name="id" value="<%= task.id %>">
+                <button type="submit">Update</button>
+              </form>
+              <form action="/update-status" method="post" style="display:inline;">
+                <select name="status">
+                  <% ['Backlog', 'Fazer', 'Fazendo', 'Feito'].forEach(s => { %>
+                    <option value="<%= s %>" <%= s === status ? 'selected' : '' %>><%= s %></option>
+                  <% }); %>
+                </select>
+                <input type="hidden" name="id" value="<%= task.id %>">
+                <button type="submit">Move</button>
+              </form>
+              <form action="/delete" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="<%= task.id %>">
+                <button type="submit">Delete</button>
+              </form>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>

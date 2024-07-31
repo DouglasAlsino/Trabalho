@@ -28,5 +28,15 @@ Este é um aplicativo de lista de tarefas (To Do List) desenvolvido com Node.js 
 
 1. Clone o repositório:
    ```bash
-   git clone 
+   git clone https://github.com/DouglasAlsino/Trabalho
    cd to-do-list
+
+#BANCO DE DADOS
+CREATE DATABASE todolistDB;
+USE todolistDB;
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    completed BOOLEAN DEFAULT FALSE
+);
